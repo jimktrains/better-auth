@@ -27,6 +27,7 @@ Login:
                               <---------   Generates Session identifier
 
 Register:
+
          Client                   |     Server
     POST /register
         username=blah
