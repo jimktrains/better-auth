@@ -35,3 +35,20 @@ Register:
         username=blah
         public_key=blah        --------> Validates that name is unique and key makes sense
                               <--------- Confirms registration
+
+
+I would propose the following meta tags:
+
+* ba-login - points to the login url
+* ba-register - points to the registration url
+* ba-change-password - points to the change password url (UA forces user to re-enter password and performs a login and then register to this page)
+
+Examples:
+
+    <meta name="ba-login" content="/login" />
+    <meta name="ba-register" content="/register" />
+    <meta name="ba-change-password" content="/change-password" />
+
+The User-Agent can detect these meta tags and provide the appropriate login facilities in the browser.
+
+It is recommended to always use TLS/SSL when performing these transactions.
