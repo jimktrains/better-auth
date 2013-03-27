@@ -13,10 +13,7 @@ passwb = bytes(password, 'ascii')
 h = hmac.new(passwb, None, hashlib.sha512)
 
 ######## SITE SENDS SALT  ############
-######## Would be random. Being cheap here ###########
-######## So that I get the same random for each user. this would be in a db#######
-
-rand = hashlib.sha512(passwb).digest()
+rand = bytes(hex(random.randrange(111121212121212121212121212121212121212121121212)), 'ascii')
 ######################################################
 ############ DONE IN BROWSER #########################
 h.update(rand)
@@ -24,7 +21,7 @@ h.update(emailb)
 
 random.seed(int(h.hexdigest(), 16))
 
-pubkey,privkey = test_auth_rsa.keygen(2**1024)
+pubkey,privkey = test_auth_rsa.keygen(2**512)
 
 ##################### During Registration pubkey is set to server #############
 
