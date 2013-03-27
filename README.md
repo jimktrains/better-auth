@@ -3,6 +3,8 @@ better-auth
 
 This is a test/proof-of-concept for a password-based client-server authentication that provides mutual authentication and no secrets being stored on the server.
 
+To run the test ``python3 test_auth.py``
+
 Login:
 
          Client                   |     Server
