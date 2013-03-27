@@ -52,3 +52,5 @@ Examples:
 The User-Agent can detect these meta tags and provide the appropriate login facilities in the browser.
 
 It is recommended to always use TLS/SSL when performing these transactions.
+
+Also note, there is no logout url.  This is because the client is free to discard the session cookie whenever it feels the need to or is commanded to by the user.
